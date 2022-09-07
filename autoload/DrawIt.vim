@@ -4,7 +4,7 @@
 " Maintainer:	Charles E Campbell <NcampObell@SdrPchip.AorgM-NOSPAM>
 " Authors:		Charles E. Campbell
 "   			Sylvain Viart (molo@multimania.com)
-" Version:		14
+" Version:		15a		ASTRO-ONLY
 " Date:			Jan 05, 2018 - Jan 07, 2020
 "
 " Quick Setup: {{{1
@@ -42,7 +42,7 @@
 if &cp || exists("g:loaded_DrawIt")
  finish
 endif
-let g:loaded_DrawIt= "v14"
+let g:loaded_DrawIt= "v15a"
 if v:version < 700
  echohl WarningMsg
  echo "***warning*** this version of DrawIt needs vim 7.0"
@@ -536,11 +536,12 @@ fun! s:DrawItSaveUserSettings()
   let b:di_repkeep   = &l:report
   let b:di_sikeep    = &l:si
   let b:di_stakeep   = &l:sta
-  let b:di_vekeep    = &l:ve
+  let b:di_vekeep    = &ve
 
   " change user settings to something safe for DrawIt
   setl cpo&vim
-  setl nocin noai nosi nogd sta et ve=all report=10000
+  setl nocin noai nosi nogd sta et report=10000
+  set  ve=all
   setl go-=aA
   setl fo-=a
   setl remap magic
@@ -566,7 +567,7 @@ fun! s:DrawItRestoreUserSettings()
   let &l:report = b:di_repkeep
   let &l:si     = b:di_sikeep
   let &l:sta    = b:di_stakeep
-  let &l:ve     = b:di_vekeep
+  let &ve       = b:di_vekeep
   unlet b:di_aikeep  
   unlet b:di_cinkeep 
   unlet b:di_cpokeep 

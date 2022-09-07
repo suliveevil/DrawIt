@@ -1,6 +1,6 @@
 DrawIt.txt*	The DrawIt Tool				Jan 05, 2018
 
-Authors:  Charles E. Campbell  <NdrchipO@ScampbellPfamily.AbizM>
+Authors:  Charles E. Campbell  <NcampObell@SdrPchip.AorgM-NOSPAM>
           Sylvain Viart             <molo@multimania.com>
 	  (remove NOSPAM from Campbell's email first)
 Copyright:    Copyright (C) 2018 Charles E. Campbell
